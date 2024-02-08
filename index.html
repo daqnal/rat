@@ -6,8 +6,35 @@
     <title>rat</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<script>
+  // handle counter
+  window.onload = function start() {
+    counter();
+  }
 
+  let count = BigInt(0);
+
+  function counter() {
+    let counterDisplayElem = document.querySelector('.counter-display');
+
+    window.setInterval(function () {
+      count++
+      counterDisplayElem.innerHTML = count;
+    }, 4000);
+  }
+
+  // handle gapless audio playback
+  
+  var current_player = "a";
+  var player_a = document.createElement("audio");
+  var player_b = document.createElement("audio");
+
+  player_a.src = "/assets/audio.ogg";
+  player_b.src = player_a.src;
+
+
+</script>
+<body>
   <audio id="musicplayer" autoplay loop>
     <source src="assets/candyland.ogg">
   </audio>
@@ -777,34 +804,5 @@
     </a>
     
   </section>
-
-  <script>
-    // handle counter
-    window.onload = function start() {
-      counter();
-    }
-
-    let count = BigInt(0);
-
-    function counter() {
-      let counterDisplayElem = document.querySelector('.counter-display');
-
-      window.setInterval(function () {
-        count++
-        counterDisplayElem.innerHTML = count;
-      }, 4000);
-    }
-
-    // handle gapless audio playback
-    
-    var current_player = "a";
-    var player_a = document.createElement("audio");
-    var player_b = document.createElement("audio");
-
-    player_a.src = "/assets/audio.ogg";
-    player_b.src = player_a.src;
-
-
-  </script>
 </body>
 </html>
