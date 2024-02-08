@@ -1,5 +1,5 @@
 :root {
-  --speed: 5s;
+  --speed: 4s;
 }
 
 @font-face {
@@ -9,9 +9,9 @@
 }
 
 @font-face {
-font-family: IntelOneMonoBold;
-src: url("./assets/i1mb.woff2");
-font-weight: bold;
+  font-family: IntelOneMonoBold;
+  src: url("./assets/i1mb.woff2");
+  font-weight: bold;
 }
 
 html {

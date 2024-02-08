@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <audio id="musicplayer" autoplay loop>
+    <source src="assets/candyland.ogg">
+  </audio>
+
   <section class="rat">
     <!-- ugliest html known to man incoming -->
 
@@ -765,7 +770,7 @@
   </section>
 
   <section class="status">
-    <a href="https://github.com/dgdghp/rat.html">
+    <a href="https://github.com/daqnal/rat">
       <h3>you have been blessed with </h3>
       <h3 class="counter-display">0</h3>
       <h3> spins of the rat</h3>
@@ -796,29 +801,10 @@
     var player_a = document.createElement("audio");
     var player_b = document.createElement("audio");
 
-    player_a.src = "./assets/audio.ogg";
+    player_a.src = "/assets/audio.ogg";
     player_b.src = player_a.src;
 
-    function loopIt(){
-        var player = null;
 
-        if(current_player == "a"){
-            player = player_b;
-            current_player = "b";
-        }
-        else{
-            player = player_a;
-            current_player = "a";
-        }
-
-        player.play();
-
-        setTimeout(loopIt, 6570); //5333 is the length of the audio clip in milliseconds.
-    }
-
-    loopIt();
-
-
-  </script>    
+  </script>
 </body>
 </html>
