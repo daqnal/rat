@@ -19,5 +19,5 @@
                                                            ..........       ..     ....         .....                                             
                                                                           ....                ...                                                 
 ```
-### text and audio based off of the amazing bash script: https://github.com/Mcharlsto/rat
+### text and audio based off of the legendary C program: [https://github.com/Mcharlsto/rat](https://github.com/thinkingsand/rat)
 ### font is Intel One Mono: https://github.com/intel/intel-one-mono
