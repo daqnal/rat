@@ -5,39 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rat</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="rat.js"></script>
 </head>
-<script>
-  // handle counter
-  window.onload = function start() {
-    counter();
-  }
 
-  let count = BigInt(0);
-
-  function counter() {
-    let counterDisplayElem = document.querySelector('.counter-display');
-
-    window.setInterval(function () {
-      count++
-      counterDisplayElem.innerHTML = count;
-    }, 4000);
-  }
-
-  // handle gapless audio playback
-  
-  var current_player = "a";
-  var player_a = document.createElement("audio");
-  var player_b = document.createElement("audio");
-
-  player_a.src = "/assets/audio.ogg";
-  player_b.src = player_a.src;
-
-
-</script>
 <body>
-  <audio id="musicplayer" autoplay loop>
-    <source src="assets/candyland.ogg">
-  </audio>
 
   <section class="rat">
     <!-- ugliest html known to man incoming -->
@@ -802,7 +773,12 @@
       <h3 class="counter-display">0</h3>
       <h3> spins of the rat</h3>
     </a>
-    
+
+    <input type="button" id="play-button" value="♫PLAY♫" onclick="play()">
+    <audio id="audio" loop>
+      <source src="assets/candyland.ogg">
+    </audio>
+
   </section>
 </body>
 </html>
