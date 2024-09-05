@@ -1,3 +1,5 @@
+let speed = 1;
+document.documentElement.style.setProperty("--speed", `${4/speed}s`);
 
 // handle counter
 window.onload = function start() {
