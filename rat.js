@@ -1,24 +1,49 @@
-let speed = 1;
-document.documentElement.style.setProperty("--speed", `${4/speed}s`);
-
 // handle counter
 window.onload = function start() {
 
-  counter();
+  changeSpeed();
 }
 
-let count = BigInt(0);
 
-function counter() {
-  let counterDisplayElem = document.querySelector('.counter-display');
+let count = 0;
 
-  window.setInterval(function () {
-    count++
-    counterDisplayElem.innerHTML = count;
-  }, 4000);
+function increaseCounter() {
+  count++
+  document.querySelector('#counter-display').innerHTML = count;
 }
 
-// handle gapless audio playback
+
+function updateCounter() {
+
+  // Get the computed styles of the root element
+  var style = getComputedStyle(document.body);
+
+  // Get the value of the --speed variable
+  let ms = style.getPropertyValue('--speed').slice(0, -1) * 1000;
+  console.log(ms)
+
+  counterIntervalId = window.setInterval(increaseCounter, ms);
+
+  return counterIntervalId;
+}
+
+
+function changeSpeed() {
+  let speedChanger = document.querySelector("#speed-changer");
+
+  // Listen for changes to form fields
+  speedChanger.addEventListener('change', () => {
+    let speedChangerValue = speedChanger.value;
+    let seconds = 4 / speedChangerValue;
+    document.documentElement.style.setProperty("--speed", `${seconds}s`)
+    console.log(updateCounter());
+    clearInterval(updateCounter());
+    updateCounter();
+  });
+}
+
+
+// handle audio playback
 
 function play(playButton) {
   var audio = document.getElementById("audio");
@@ -28,4 +53,4 @@ function play(playButton) {
 }
 
 // if the play button hasn't been clicked after 15 seconds, remove it
-setTimeout(function() {document.getElementById("play-button").remove()}, 15000);
+// setTimeout(function() {document.getElementById("play-button").remove()}, 15000);

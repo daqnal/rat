@@ -770,14 +770,18 @@
   <section class="status">
     <a href="https://github.com/daqnal/rat">
       <h3>you have been blessed with </h3>
-      <h3 class="counter-display">0</h3>
+      <h3 id="counter-display">0</h3>
       <h3> spins of the rat</h3>
     </a>
 
-    <input type="button" id="play-button" value="♫PLAY♫" onclick="play()">
-    <audio id="audio" loop>
-      <source src="assets/candyland.ogg">
-    </audio>
+    <div id="controls-container">
+      <input type="button" id="play-button" value="♫PLAY♫" onclick="play()">
+      <audio id="audio" loop>
+        <source src="assets/candyland.ogg">
+      </audio>
+  
+      <input type="number" name="speed-changer" id="speed-changer" value="1" step="0.1">
+    </div>
 
   </section>
 </body>

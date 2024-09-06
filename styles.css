@@ -1,4 +1,6 @@
-
+:root {
+  --speed: 4s;
+}
 
 @font-face {
   font-family: IntelOneMono;
@@ -25,13 +27,13 @@ html {
 }
 
 
-div {
+.rat div {
     position: fixed;
     display: inline;
     white-space: pre-wrap;
     text-align: center;
     width: 100%;
-    top: 45px;
+    top: 75px;
 
     line-height: 1.25;
 }
@@ -54,7 +56,14 @@ h3 {
 .status {
   width: 100%;
   text-align: center;
-  
+}
+
+#controls-container {
+  display: block;
+}
+
+#speed-changer {
+  width: 50px;
 }
 
 .rat {
