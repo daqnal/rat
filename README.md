@@ -1,5 +1,5 @@
 # horizontally spinning rat
-[Live demo here](https://rat-spin.vercel.app/)
+[Live demo here](https://rat.dance)
 ```                                                                           .......                                                           
                                                                          .....::::---:::..                                                        
                                                                    .....:::::-----------::..                                                      
@@ -20,5 +20,6 @@
                                                            ..........       ..     ....         .....                                             
                                                                           ....                ...                                                 
 ```
-### text and audio based off of the legendary C program: [https://github.com/Mcharlsto/rat](https://github.com/thinkingsand/rat)
-### font is Intel One Mono: https://github.com/intel/intel-one-mono
+### text based off of the legendary C program: [https://github.com/Mcharlsto/rat](https://github.com/thinkingsand/rat)
+### font is [Intel One Mono](https://github.com/intel/intel-one-mono) 
+### audio is [low quality candyland by tobu](https://youtu.be/2kp8B3x28pM)
