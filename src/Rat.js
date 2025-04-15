@@ -21,7 +21,7 @@ const controls = new OrbitControls(camera, renderer.domElement);
 const loader = new GLTFLoader();
 
 loader.load(
-  "assets/banana.glb",
+  "/banana.glb",
 
   function (gltf) {
     // const model = gltf.scene;
