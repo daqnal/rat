@@ -27,12 +27,14 @@
 ## Stack
 - three.js
 
+## Todo
+- [ ] Resize 3js canvas on viewport size change
+
 ## Development
 - Clone the repo
 - `npm install`
 - `npx vite`
 
 ## Credits
-inspired by the legendary C program: [https://github.com/Mcharlsto/rat](https://github.com/thinkingsand/rat)
-font: [Intel One Mono](https://github.com/intel/intel-one-mono)
-audio: [low quality candyland by tobu](https://youtu.be/2kp8B3x28pM)
+- inspired by the legendary C program: [https://github.com/Mcharlsto/rat](https://github.com/thinkingsand/rat)
+- audio: [low quality candyland by tobu](https://youtu.be/2kp8B3x28pM)
