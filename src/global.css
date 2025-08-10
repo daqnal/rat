@@ -1,0 +1,111 @@
+
+/* Fonts */
+
+@font-face {
+    font-family: "Intel One Mono Bold";
+    src: url("/IntelOneMono-Bold.woff2");
+}
+
+@font-face {
+    font-family: "Intel One Mono Medium";
+    src: url("/IntelOneMono-Medium.woff2");
+}
+
+
+
+
+/* Important tags and containers */
+
+html, body, #root {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Intel One Mono Medium", monospace;
+    color: rgb(220, 220, 220);
+    z-index: 0;
+}
+
+#canvas-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* Counter & text at top */
+
+#counter-container {
+    width: 100%;
+    text-align: center;
+    font-size: 1.7vw;
+    margin-top: 0.5em;
+}
+
+#counter {
+    font-family: "Intel One Mono Bold", monospace;
+}
+
+
+
+
+/* Background */
+
+#bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(28, 28, 28);
+    z-index: -1;
+}
+
+
+
+
+/* Sidebar */
+
+#sidebar {
+    display: flex;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 200px;
+    z-index: 1;
+    transform: translateX(100px);
+}
+
+#sidebar-toggle-button-container, #sidebar-menu {
+    height: 100%;
+    width: 50%;
+    display: flex;
+}
+
+#sidebar-toggle-button {
+    width: 100%;
+    height: 100%;
+    background: rgba(75, 75, 75, 0.5);
+    border: none;
+    
+    filter: opacity(0);
+}
+
+#sidebar-toggle-button:hover {
+    /* filter: opacity(1); */
+    animation: fade-in 1s linear forwards;
+}
+
+@keyframes fade-in {
+    from {
+        filter: opacity(0);
+    }
+    to {
+        filter: opacity(1);
+    }
+}
