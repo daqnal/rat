@@ -1,6 +1,6 @@
 # horizontally spinning rat
 
-[Live demo here](https://rat.dance)
+## visit now at [rat.dance](https://rat.dance)
 
 ```
                                                                               .......
@@ -25,10 +25,9 @@
 ```
 
 ## Stack
-- three.js
+- React
+- React Three Fiber (three.js)
 
-## Todo
-- [ ] Resize 3js canvas on viewport size change
 
 ## Development
 - Clone the repo
@@ -38,3 +37,4 @@
 ## Credits
 - inspired by the legendary C program: [https://github.com/Mcharlsto/rat](https://github.com/thinkingsand/rat)
 - audio: [low quality candyland by tobu](https://youtu.be/2kp8B3x28pM)
+- rat model: [low poly rat](https://free3d.com/3d-model/low-poly-rat-3205.html)
