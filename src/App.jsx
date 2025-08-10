@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <Sidebar />
+      {/* <Sidebar /> */}
       <Background />
       <Scene speed={speed} setSpins={setSpins}/>
       <Counter spins={spins}/>
