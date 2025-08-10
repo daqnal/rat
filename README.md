@@ -38,3 +38,4 @@
 - inspired by the legendary C program: [https://github.com/Mcharlsto/rat](https://github.com/thinkingsand/rat)
 - audio: [low quality candyland by tobu](https://youtu.be/2kp8B3x28pM)
 - rat model: [low poly rat](https://free3d.com/3d-model/low-poly-rat-3205.html)
+- icons: [lucide](https://lucide.dev)

@@ -7,7 +7,7 @@ import Counter from "./components/Counter.jsx";
 import Scene from "./components/3d/Scene";
 import Background from "./components/Background.jsx";
 import Audio from "./components/Audio.jsx";
-import Sidebar from './components/Sidebar.jsx';
+import Sidebar from './components/sidebar/Sidebar.jsx';
 
 function App() {
 
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-      {/* <Sidebar /> */}
+      <Sidebar />
       <Background />
       <Scene speed={speed} setSpins={setSpins} hueSpeed={hueSpeed} />
       <Counter spins={spins}/>
