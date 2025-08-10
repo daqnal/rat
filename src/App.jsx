@@ -12,13 +12,18 @@ import Sidebar from './components/Sidebar.jsx';
 function App() {
 
   const [spins, setSpins] = useState(0);
-  const [speed, setSpeed] = useState(1);
+
+  // Speed of the rat's spin, measured in revolutions per second
+  const [speed, setSpeed] = useState(0.2);
+
+  // Speed of the changing hue of the rat, measured in cycles per second
+  const [hueSpeed, setHueSpeed] = useState(0.1);
 
   return (
     <>
       {/* <Sidebar /> */}
       <Background />
-      <Scene speed={speed} setSpins={setSpins}/>
+      <Scene speed={speed} setSpins={setSpins} hueSpeed={hueSpeed} />
       <Counter spins={spins}/>
       <Audio />
     </>
