@@ -1,5 +1,4 @@
-export default function FullscreenControl({ icon }) {
-    return (
-        <p>f</p>
-    )
+export default function FullscreenControl() {
+
+    return null;
 }

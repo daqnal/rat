@@ -8,6 +8,7 @@ import BackgroundControl from './BackgroundControl';
 export default function SidebarButton() {
 
     const [sidebarMoved, setSidebarMoved] = useState(false);
+    const [ActiveMenuComponent, setActiveMenuComponent] = useState(null);
 
     const sidebarMenuItems = [
         {name: "audio", icon: "/icons/volume.svg", component: AudioControl},
@@ -19,6 +20,28 @@ export default function SidebarButton() {
 
     function handleToggleSidebar() {
         setSidebarMoved(!sidebarMoved);
+    }
+
+    function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            } else if (document.documentElement.webkitRequestFullscreen) {
+                document.documentElement.webkitRequestFullscreen;
+            } else if (document.documentElement.msRequestFullscreen) {
+                document.documentElement.msRequestFullscreen();
+            }
+        } else {
+            document.exitFullscreen();
+        }
+    }
+
+    function handleClick(component) {
+        if (component === FullscreenControl) {
+            toggleFullscreen();
+        } else {
+            setActiveMenuComponent(() => component);
+        }
     }
 
     return (
@@ -52,10 +75,11 @@ export default function SidebarButton() {
             <div id="sidebar-menu">
                 {sidebarMenuItems.map(({name, icon, component}, index) => (
                     <div className="control-container">
-                        <button className="control-button">
+                        <button className="control-button" onClick={() => handleClick(component)}>
                             <img src={icon} alt={name} />
                             {name}
                         </button>
+                        {ActiveMenuComponent === component && ActiveMenuComponent && (<ActiveMenuComponent />)}
                     </div>
                 ))}
             </div>
