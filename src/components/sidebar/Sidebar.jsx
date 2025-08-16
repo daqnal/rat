@@ -4,6 +4,7 @@ import AudioControl from './AudioControl';
 import SpeedControl from './SpeedControl';
 import Info from './Info';
 import BackgroundControl from './BackgroundControl';
+import ControlMenu from './ControlMenu';
 
 export default function SidebarButton() {
 
@@ -79,7 +80,8 @@ export default function SidebarButton() {
                             <img src={icon} alt={name} />
                             {name}
                         </button>
-                        {ActiveMenuComponent === component && ActiveMenuComponent && (<ActiveMenuComponent />)}
+                        {/* {ActiveMenuComponent === component && ActiveMenuComponent && (<ActiveMenuComponent />)} */}
+                        <ControlMenu ActiveMenuComponent={ActiveMenuComponent} component={component} />
                     </div>
                 ))}
             </div>

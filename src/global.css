@@ -136,13 +136,25 @@ html, body, #root {
 
 .control-button:hover {
     background-color: rgb(75, 75, 75);
-    border: 2px solid rgb(45, 45, 45);
+    /* border: 2px solid rgb(45, 45, 45); */
 }
 
 .control-button:active {
     background-color: rgb(45, 45, 45);
 }
 
+.control-button:focus {
+    border-bottom: none;
+}
+
 .control-button img {
     width: 18px;
+}
+
+.control-menu-container {
+    background-color: rgb(45, 45, 45);
+    margin: 0px 6px 0px 6px;
+    padding: 6px;
+    border: 2px solid rgb(115, 115, 115);
+    border-top: none;
 }

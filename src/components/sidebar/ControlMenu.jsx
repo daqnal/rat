@@ -1,5 +1,7 @@
-export default function ControlMenu() {
+export default function ControlMenu({ ActiveMenuComponent, component }) {
     return (
-        <div></div>
+        <div className={ActiveMenuComponent === component ? "control-menu-container" : ""}>
+            {ActiveMenuComponent === component && ActiveMenuComponent && (<ActiveMenuComponent />)}
+        </div>
     )
 }
