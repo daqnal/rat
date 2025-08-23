@@ -1,4 +1,3 @@
-
 /* Fonts */
 
 @font-face {
@@ -11,12 +10,11 @@
     src: url("/IntelOneMono-Medium.woff2");
 }
 
-
-
-
 /* Important tags and containers */
 
-html, body, #root {
+html,
+body,
+#root {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -37,9 +35,6 @@ html, body, #root {
     height: 100%;
 }
 
-
-
-
 /* Counter & text at top */
 
 #counter-container {
@@ -53,9 +48,6 @@ html, body, #root {
     font-family: "Intel One Mono Bold", monospace;
 }
 
-
-
-
 /* Background */
 
 #bg {
@@ -66,9 +58,6 @@ html, body, #root {
     z-index: -1;
 }
 
-
-
-
 /* Sidebar */
 
 #sidebar {
@@ -76,13 +65,13 @@ html, body, #root {
     position: absolute;
     right: 0;
     height: 100%;
-    width: 200px;
+    width: 300px;
     z-index: 1;
 }
 
 #sidebar-toggle-button-container {
     height: 100%;
-    width: 30%;
+    width: 20%;
     display: flex;
 }
 
@@ -91,12 +80,11 @@ html, body, #root {
     height: 100%;
     background: rgba(75, 75, 75, 0.5);
     border: none;
-    
+
     filter: opacity(0);
 }
 
 #sidebar-toggle-button:hover {
-    /* filter: opacity(1); */
     animation: fade-in 0.5s linear forwards;
 }
 
@@ -111,7 +99,7 @@ html, body, #root {
 
 #sidebar-menu {
     height: 100%;
-    width: 70%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     background-color: rgb(75, 75, 75);
@@ -120,31 +108,27 @@ html, body, #root {
 .control-container {
     display: flex;
     flex-direction: column;
+    border: 2px solid rgb(115, 115, 115);
+    margin: 6px 6px 0 6px;
 }
 
 .control-button {
-    width: 128px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 4px;
     background-color: rgb(45, 45, 45);
-    margin: 6px 6px 0 6px;
+    border: none;
     padding: 6px;
-    border: 2px solid rgb(115, 115, 115);
+    font-size: medium;
 }
 
 .control-button:hover {
     background-color: rgb(75, 75, 75);
-    /* border: 2px solid rgb(45, 45, 45); */
 }
 
 .control-button:active {
     background-color: rgb(45, 45, 45);
-}
-
-.control-button:focus {
-    border-bottom: none;
 }
 
 .control-button img {
@@ -153,8 +137,27 @@ html, body, #root {
 
 .control-menu-container {
     background-color: rgb(45, 45, 45);
-    margin: 0px 6px 0px 6px;
     padding: 6px;
-    border: 2px solid rgb(115, 115, 115);
     border-top: none;
+    font-size: small;
+}
+
+/* Speed Control */
+
+input {
+    background-color: rgb(115, 115, 115);
+    border: 2px solid rgb(75, 75, 75);
+    color: white;
+    height: 2.5em;
+}
+
+#speed-input {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Info */
+
+a {
+    color: rgb(40, 80, 250);
 }

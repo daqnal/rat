@@ -1,16 +1,15 @@
-import { createRoot } from 'react-dom/client'
-import { useState } from 'react';
+import { createRoot } from "react-dom/client";
+import { useState } from "react";
 
 import "./global.css";
 
 import Counter from "./components/Counter.jsx";
 import Scene from "./components/3d/Scene";
 import Background from "./components/Background.jsx";
-import Sidebar from './components/sidebar/Sidebar.jsx';
-import Audio from './components/Audio.jsx';
+import Sidebar from "./components/sidebar/Sidebar.jsx";
+import Audio from "./components/Audio.jsx";
 
 function App() {
-
   const [spins, setSpins] = useState(0);
 
   // Speed of the rat's spin, measured in revolutions per second
@@ -21,13 +20,13 @@ function App() {
 
   return (
     <>
-      <Sidebar />
+      <Sidebar speed={speed} setSpeed={setSpeed} />
       <Background />
       <Scene speed={speed} setSpins={setSpins} hueSpeed={hueSpeed} />
-      <Counter spins={spins}/>
-      <Audio />
+      <Counter spins={spins} />
+      {/* <Audio /> */}
     </>
-  )
+  );
 }
 
-createRoot(document.getElementById('root')).render(<App />)
+createRoot(document.getElementById("root")).render(<App />);

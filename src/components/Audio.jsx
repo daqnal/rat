@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import shantyAudio from "/audio/shanty.ogg";
+import candylandAudio from "/audio/candyland.ogg"; 
 
 export default function Audio() {
     const [isPlaying, setIsPlaying] = useState(true);
@@ -14,5 +15,7 @@ export default function Audio() {
         setIsPlaying(!isPlaying);
     };
 
-    return null;
+    return (
+      <audio src={currentAudio}/>
+    );
 }
