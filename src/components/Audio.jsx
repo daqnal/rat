@@ -1,22 +1,21 @@
-import { useState } from "react";
-import audioFile from "/candyland.ogg";
+import { useState, useRef, useEffect } from 'react';
+import shantyAudio from "/audio/shanty.ogg";
+import candylandAudio from "/audio/candyland.ogg"; 
 
 export default function Audio() {
-    const audioTag = document.getElementById("audio-tag");
-    const [play, setPlay] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(true);
+    const audio = useRef(new Audio(shantyAudio));
+
+    function togglePlayPause() {
+        if (isPlaying) {
+        audio.pause();
+        } else {
+        audio.play();
+        }
+        setIsPlaying(!isPlaying);
+    };
 
     return (
-        <>
-            {/* <button
-                id="audio-button"
-                onClick={() => {
-                play ? setPlay(false) : setPlay(true);
-                play ? audioTag.pause() : audioTag.play();
-                }}
-            >
-                toggle
-            </button> */}
-            <audio id="audio-tag" src={audioFile}/>
-        </>
-    )
+      <audio src={currentAudio}/>
+    );
 }

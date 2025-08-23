@@ -1,5 +1,3 @@
 export default function BackgroundControl() {
-    return (
-        <p>bg</p>
-    )
+  return <p>WIP</p>;
 }
