@@ -6,7 +6,12 @@ import Info from "./Info";
 import BackgroundControl from "./BackgroundControl";
 import ControlMenu from "./ControlMenu";
 
-export default function SidebarButton({ speed, setSpeed }) {
+export default function SidebarButton({
+  speed,
+  setSpeed,
+  togglePlayPause,
+  isPlaying,
+}) {
   const [sidebarMoved, setSidebarMoved] = useState(false);
   const [ActiveMenuComponent, setActiveMenuComponent] = useState(null);
 
@@ -93,6 +98,9 @@ export default function SidebarButton({ speed, setSpeed }) {
               ActiveMenuComponent={ActiveMenuComponent}
               component={component}
               {...(component === SpeedControl ? { speed, setSpeed } : {})}
+              {...(component === AudioControl
+                ? { togglePlayPause, isPlaying }
+                : {})}
             />
           </div>
         ))}

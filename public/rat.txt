@@ -1,8 +1,3 @@
-# horizontally spinning rat
-
-## visit now at [rat.dance](https://rat.dance)
-
-```
                                                                               .......
                                                                          .....::::---:::..
                                                                    .....:::::-----------::..
@@ -22,25 +17,3 @@
                                                         ....:-=++++=:.               .:--=++===-:.......
                                                            ..........       ..     ....         .....
                                                                           ....                ...
-```
-
-## Stack
-- React
-- React Three Fiber (three.js)
-- react-use-audio-player
-
-
-## Development
-*my first complete-ish react project, so forgive the messy code*
-
-- Clone the repo
-- `npm install`
-- `npm run dev`
-
-## Credits
-- ascii and inspiration from the legendary c program: [https://github.com/thinkingsand/rat](https://github.com/thinkingsand/rat)
-- audio:
-  - [what shall we do with a drunken sailor (from spongebob) by okko bekker](https://youtu.be/FOwXlANwerI)
-  - [low quality candyland by tobu](https://youtu.be/2kp8B3x28pM)
-- rat model: [low poly rat](https://free3d.com/3d-model/low-poly-rat-3205.html)
-- icons: [lucide](https://lucide.dev)
