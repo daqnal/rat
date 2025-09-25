@@ -27,11 +27,11 @@
 ## Stack
 - React
 - React Three Fiber (three.js)
+  - react-three/drei
 - react-use-audio-player
 
 
 ## Development
-*my first complete-ish react project, so forgive the messy code*
 
 - Clone the repo
 - `npm install`

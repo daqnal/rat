@@ -1,19 +1,26 @@
-import * as THREE from 'three';
-import { Canvas } from '@react-three/fiber';
-import { useState } from 'react'
-import Rat from './Rat.jsx';
+import * as THREE from "three";
+import { Canvas } from "@react-three/fiber";
+import { useState, Suspense } from "react";
+import Rat from "./Rat.jsx";
+import Loading from "../Loading.jsx";
 
 export default function Scene({ speed, spins, setSpins, hueSpeed }) {
-    const [ratHue, setRatHue] = useState(0);
-    const ratColor = new THREE.Color().setHSL(ratHue, 1, 0.5);
-    return (
-
-        <div id="canvas-container">
-            <Canvas camera={{fov: 50}}>
-                <Rat speed={speed} setSpins={setSpins} setRatHue={setRatHue} hueSpeed={hueSpeed} />
-                <ambientLight intensity={0.25} />
-                <directionalLight color={ratColor} position={[0, 0, 5]} />
-            </Canvas>
-        </div>
-    )
+  const [ratHue, setRatHue] = useState(0);
+  const ratColor = new THREE.Color().setHSL(ratHue, 1, 0.5);
+  return (
+    <div id="canvas-container">
+      <Canvas camera={{ fov: 50 }}>
+        <Suspense fallback={<Loading />}>
+          <Rat
+            speed={speed}
+            setSpins={setSpins}
+            setRatHue={setRatHue}
+            hueSpeed={hueSpeed}
+          />
+        </Suspense>
+        <ambientLight intensity={0.25} />
+        <directionalLight color={ratColor} position={[0, 0, 5]} />
+      </Canvas>
+    </div>
+  );
 }

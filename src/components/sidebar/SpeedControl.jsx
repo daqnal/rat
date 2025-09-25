@@ -8,7 +8,7 @@ export default function SpeedControl({ speed, setSpeed }) {
         step="0.1"
         onChange={(e) => setSpeed(e.target.value)}
       ></input>
-      <label for="speed-input">rotations/sec</label>
+      <label for="speed-input">rpm</label>
     </>
   );
 }
